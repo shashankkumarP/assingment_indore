@@ -9,5 +9,6 @@ const upload = multer({ storage: multer.memoryStorage() });
 userRouter.post("/signup",SignupAuth,userController.userSignup);
 userRouter.post("/login",LoginAuth,);
 userRouter.post("/adminProject",AdminAuth, upload.single("file"),userController.adminUploadproject);
+userRouter.get('/getfullfile',userController.userLowestbit);
 
 module.exports=userRouter;

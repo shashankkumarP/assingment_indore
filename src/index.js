@@ -11,6 +11,9 @@ app.use(cors());
 
 app.use('/user',userRouter)
 
+app.get('/',(req,res)=>{
+   return res.status(200).json('working');
+})
 
 app.listen(PORT,async()=>{
     try{
