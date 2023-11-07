@@ -17,6 +17,7 @@ app.get('/',(req,res)=>{
 
 app.listen(PORT,async()=>{
     try{
+        console.log(MONGO_URL)
         await mongoose.connect(MONGO_URL);
         console.log('connected');
 
